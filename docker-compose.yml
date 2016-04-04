@@ -1,0 +1,9 @@
+main:
+  build: .
+  volumes:
+    - "/data/kauntah:/usr/src/app/data"
+  restart: always
+  environment:
+    VIRTUAL_HOST: kauntah.meiji-ncc.tech
+    VIRTUAL_PORT: 3000
+
