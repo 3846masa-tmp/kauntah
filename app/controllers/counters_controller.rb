@@ -6,7 +6,7 @@ class CountersController < ApplicationController
 
   def counter
     # Setup
-    request.referer =~ /^http:\/\/(.+?)\/.*$/
+    request.referer =~ /^https?:\/\/(.+?)\/.*$/
     owner = $1
     logger.info "owner: #{owner}"
     counter = Counter.find_by_owner(owner) || Counter.new(:owner => owner)
